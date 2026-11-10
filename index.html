@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>郑宇 — Academic Profile</title>
+  <meta name="description" content="Public academic homepage of 郑宇, 闽南师范大学. Name, affiliation and contact email are listed here for OpenReview profile verification." />
+
+  <!--
+  ============================================================
+  READY TO UPLOAD — file name must be exactly: index.html
+
+  Already filled in (MUST match your OpenReview registration):
+    Name        郑宇
+    Affiliation 闽南师范大学
+    Email       2809686518@qq.com
+
+  >>> CHECK THIS BEFORE PUBLISHING <<<
+  If your OpenReview "Full name" is written in Latin letters
+  (e.g. "Yu Zheng" or "Zheng Yu"), use Find & Replace to change
+  every "郑宇" in this file to that EXACT spelling. The name on
+  this page must match the OpenReview name character by character.
+
+  If your OpenReview "Education & Career History" uses an English
+  institution name, add it next to 闽南师范大学 using the exact
+  spelling from your university's official website.
+
+  If you later switch your OpenReview registration email to an
+  institutional one, replace 2809686518@qq.com here too — the page
+  email must always equal the registration email.
+
+  No degree, department, advisor, publication or research area is
+  claimed on this page, because none was provided. Add real details
+  only when you have them; never invent academic information.
+
+  Single file. No external fonts, scripts or CDN. Works offline.
+  ============================================================
+  -->
+
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #0f172a;
+      --muted: #64748b;
+      --line: #e5eaf1;
+      --brand: #1d4ed8;
+      --brand-soft: #eef4ff;
+      --card: #ffffff;
+      --radius: 16px;
+      --shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 12px 32px -20px rgba(15, 23, 42, .28);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 2.6rem 1.2rem 3.5rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+                   "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.65;
+      color: var(--ink);
+      background:
+        radial-gradient(900px 420px at 12% -8%, #dce8ff 0%, transparent 65%),
+        radial-gradient(760px 380px at 92% 4%, #d8f3ee 0%, transparent 62%),
+        #f6f8fb;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap { max-width: 880px; margin: 0 auto; }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 2.5rem 2.4rem 2.3rem;
+      border-radius: 22px;
+      color: #fff;
+      background: linear-gradient(135deg, #122a5c 0%, #1d4ed8 48%, #0f766e 100%);
+      box-shadow: 0 18px 44px -24px rgba(18, 42, 92, .75);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: -140px; right: -100px;
+      width: 380px; height: 380px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,.16), transparent 68%);
+      pointer-events: none;
+    }
+    .hero-top { position: relative; display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; }
+    .avatar {
+      flex: 0 0 auto;
+      width: 74px; height: 74px;
+      display: grid; place-items: center;
+      border-radius: 50%;
+      font-size: 1.55rem; font-weight: 650; letter-spacing: .04em;
+      background: rgba(255, 255, 255, .16);
+      border: 1px solid rgba(255, 255, 255, .38);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .22);
+    }
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(1.85rem, 4.4vw, 2.5rem);
+      font-weight: 680;
+      letter-spacing: -.015em;
+      line-height: 1.2;
+    }
+    .role { margin: .25rem 0 0; font-size: 1.02rem; color: rgba(255, 255, 255, .93); }
+    .affil { margin: .1rem 0 0; font-size: .92rem; color: rgba(255, 255, 255, .74); }
+    .altname { margin: .35rem 0 0; font-size: .82rem; color: rgba(255, 255, 255, .68); letter-spacing: .02em; }
+
+    .hero-contact {
+      position: relative;
+      margin-top: 1.9rem;
+      display: flex; flex-wrap: wrap; gap: .6rem; align-items: center;
+    }
+    .pill {
+      display: inline-flex; align-items: center; gap: .45rem;
+      padding: .45rem .9rem;
+      border-radius: 999px;
+      font-size: .9rem;
+      text-decoration: none;
+      color: #fff;
+      background: rgba(255, 255, 255, .13);
+      border: 1px solid rgba(255, 255, 255, .28);
+      transition: background .18s ease, transform .18s ease;
+    }
+    a.pill:hover { background: rgba(255, 255, 255, .24); transform: translateY(-1px); }
+    .pill.static { background: rgba(255, 255, 255, .07); border-style: dashed; color: rgba(255,255,255,.85); }
+
+    /* ---------- Layout ---------- */
+    .grid {
+      margin-top: 1.25rem;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.1rem;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.45rem 1.55rem 1.55rem;
+      box-shadow: var(--shadow);
+    }
+    .card.wide { grid-column: 1 / -1; }
+    .card h2 {
+      margin: 0 0 .95rem;
+      display: flex; align-items: center; gap: .55rem;
+      font-size: .76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      color: var(--brand);
+    }
+    .card h2::before {
+      content: "";
+      width: 3px; height: 14px;
+      border-radius: 2px;
+      background: linear-gradient(180deg, #1d4ed8, #0ea5a4);
+    }
+    .card p { margin: 0 0 .8rem; font-size: .96rem; color: #334155; }
+    .card p:last-child { margin-bottom: 0; }
+    .card .small { font-size: .86rem; color: var(--muted); }
+
+    /* ---------- Verification block ---------- */
+    .verify {
+      background: linear-gradient(180deg, #f2f7ff 0%, #ffffff 100%);
+      border-left: 3px solid var(--brand);
+    }
+    .verify .lead { color: #475569; }
+    dl.kv { margin: 1.1rem 0 0; display: grid; gap: 0; }
+    dl.kv > div {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: .8rem;
+      padding: .6rem 0;
+      border-top: 1px dashed var(--line);
+    }
+    dl.kv dt { font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+    dl.kv dd { margin: 0; font-size: .98rem; font-weight: 600; word-break: break-word; }
+    dl.kv a { color: var(--brand); text-decoration: none; }
+    dl.kv a:hover { text-decoration: underline; }
+    dl.kv .hint { display: block; margin-top: .1rem; font-size: .8rem; font-weight: 400; color: var(--muted); }
+
+    .badge {
+      display: inline-flex; align-items: center; gap: .4rem;
+      margin-top: 1.1rem;
+      padding: .35rem .8rem;
+      font-size: .8rem; font-weight: 600;
+      border-radius: 999px;
+      color: #0f766e;
+      background: #e9f7f4;
+      border: 1px solid #cbeae3;
+    }
+
+    /* ---------- Chips ---------- */
+    .chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .2rem; }
+    .chip {
+      padding: .3rem .75rem;
+      font-size: .85rem;
+      border-radius: 999px;
+      color: #1e40af;
+      background: var(--brand-soft);
+      border: 1px solid #dce8ff;
+    }
+
+    /* ---------- Link cards ---------- */
+    .links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
+    .link-card {
+      display: flex; align-items: center; justify-content: space-between; gap: .8rem;
+      padding: .8rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      text-decoration: none;
+      background: #fbfcfe;
+      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+    }
+    .link-card:hover {
+      transform: translateY(-2px);
+      border-color: #b9cdff;
+      box-shadow: 0 8px 20px -14px rgba(29, 78, 216, .7);
+    }
+    .link-card .label { font-size: .92rem; font-weight: 600; color: var(--ink); }
+    .link-card .host { display: block; font-size: .78rem; font-weight: 400; color: var(--muted); }
+    .link-card .arrow { color: var(--brand); font-size: 1.05rem; }
+
+    a:focus-visible { outline: 3px solid #93c5fd; outline-offset: 3px; border-radius: 6px; }
+
+    footer {
+      margin-top: 1.8rem;
+      text-align: center;
+      font-size: .82rem;
+      color: #7c8899;
+    }
+
+    @media (max-width: 720px) {
+      body { padding: 1.4rem .9rem 2.5rem; }
+      .hero { padding: 2rem 1.5rem 1.8rem; }
+      .grid, .links { grid-template-columns: 1fr; }
+      .card.wide { grid-column: auto; }
+      dl.kv > div { grid-template-columns: 1fr; gap: .1rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+
+    @media print {
+      body { background: #fff; padding: 0; }
+      .hero { background: #fff; color: #000; border: 1px solid #ccc; box-shadow: none; }
+      .role, .affil, .altname, .pill { color: #000; }
+      .card, .link-card { box-shadow: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- ===== Hero: name / affiliation / email all visible on first screen ===== -->
+    <header class="hero">
+      <div class="hero-top">
+        <div class="avatar" aria-hidden="true">ZY</div>
+        <div>
+          <h1>郑宇</h1>
+          <p class="role">闽南师范大学</p>
+          <p class="affil">Public academic homepage &middot; OpenReview profile verification</p>
+          <!-- 若 OpenReview 的 Full name 用拼音，请以下面这行写法为准，并同步替换全文「郑宇」 -->
+          <p class="altname">Also written as Zheng Yu / Yu Zheng</p>
+        </div>
+      </div>
+
+      <div class="hero-contact">
+        <a class="pill" href="mailto:2809686518@qq.com"><span aria-hidden="true">&#9993;</span> 2809686518@qq.com</a>
+        <span class="pill static">No login required</span>
+      </div>
+    </header>
+
+    <div class="grid">
+
+      <!-- ===== 审核最看重的一块：把三要素再明文列一遍 ===== -->
+      <section class="card verify wide">
+        <h2>Identity verification</h2>
+        <p class="lead">
+          This is a public, static academic homepage. The name, affiliation and email below
+          are identical to those used for my OpenReview profile and are displayed here for
+          identity verification. No login is required to view this page.
+        </p>
+        <dl class="kv">
+          <div>
+            <dt>Name</dt>
+            <dd>郑宇
+              <span class="hint">Also written as Zheng Yu / Yu Zheng</span>
+            </dd>
+          </div>
+          <div>
+            <dt>Affiliation</dt>
+            <dd>闽南师范大学
+              <span class="hint">Institution as entered in my OpenReview profile</span>
+            </dd>
+          </div>
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:2809686518@qq.com">2809686518@qq.com</a>
+              <span class="hint">Same address as my OpenReview registration</span>
+            </dd>
+          </div>
+        </dl>
+        <span class="badge">&#10003; Name &middot; Affiliation &middot; Email visible to everyone</span>
+      </section>
+
+      <section class="card">
+        <h2>About this page</h2>
+        <p>
+          This page is my public academic homepage, hosted on GitHub Pages. It exists to
+          provide a verifiable, login-free link between my name, my institution and my
+          contact email for academic conference registration and reviewing systems.
+        </p>
+        <p class="small">
+          It contains no login wall, no redirect and no third-party tracking. All three
+          identifying fields appear in plain text above.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>At a glance</h2>
+        <div class="chips">
+          <span class="chip">郑宇</span>
+          <span class="chip">闽南师范大学</span>
+          <span class="chip">Public profile</span>
+          <span class="chip">OpenReview</span>
+        </div>
+        <p class="small" style="margin-top:.9rem">
+          Only the identity details I provided are stated here. No degree, department,
+          publication or research area is claimed.
+        </p>
+      </section>
+
+      <!-- ===== 已按仓库截图填好 GitHub 链接；可按需添加 Scholar / ORCID / DBLP =====
+      <a class="link-card" href="https://scholar.google.com/citations?user=YOUR_ID">
+        <span><span class="label">Google Scholar</span><span class="host">scholar.google.com</span></span>
+        <span class="arrow" aria-hidden="true">&nearr;</span>
+      </a>
+      -->
+      <section class="card wide">
+        <h2>Selected links</h2>
+        <div class="links">
+          <a class="link-card" href="https://github.com/landaw0">
+            <span><span class="label">GitHub</span><span class="host">github.com/landaw0</span></span>
+            <span class="arrow" aria-hidden="true">&nearr;</span>
+          </a>
+          <a class="link-card" href="mailto:2809686518@qq.com">
+            <span><span class="label">Email</span><span class="host">2809686518@qq.com</span></span>
+            <span class="arrow" aria-hidden="true">&nearr;</span>
+          </a>
+        </div>
+      </section>
+
+    </div>
+
+    <footer>
+      Public academic profile &middot; Hosted on GitHub Pages &middot; No login required
+    </footer>
+
+  </div>
+</body>
+</html>
